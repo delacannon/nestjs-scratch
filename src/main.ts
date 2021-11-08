@@ -1,20 +1,5 @@
-import { Controller, Module, Get } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
-
-// Decorator -> telling nest to create a controller
-@Controller()
-class AppController {
-  // GET decorator HTTP calls
-  @Get()
-  getRootRoute() {
-    return "Hi there!";
-  }
-}
-
-@Module({
-  controllers: [AppController],
-})
-class AppModule {}
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
   // Create an instance
